@@ -260,8 +260,11 @@ function applyIcons() {
                         addIcon(tag,iconChar);
                     }
                 }
-                // think about the children!
-                updateIcons(tag.leftNavButtons || tag.rightNavButtons || tag.views || tag.children);
+                
+                updateIcons(tag.leftNavButtons);
+                updateIcons(tag.rightNavButtons);
+                updateIcons(tag.views);
+                updateIcons(tag.children);
             });
         }
     }
